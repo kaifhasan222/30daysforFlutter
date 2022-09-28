@@ -1,5 +1,18 @@
+class CatalogModels {
+  static final Items = [
+    Item(
+        id: 1,
+        name: "Iphone 12 pro max",
+        desc: "apple iphone 12th generation",
+        price: 999,
+        color: "#33505a",
+        image:
+            "https://img.giznext.com/assets/model/2/95/apple-mobiles-apple-iphone-12-pro-max-10-1634196430.jpg")
+  ];
+}
+
 class Item {
-  final String id;
+  final int id;
   final String name;
   final String desc;
   final num price;
@@ -14,14 +27,3 @@ class Item {
       required this.color,
       required this.image});
 }
-
-final products = [
-  Item(
-      id: "shubamita001",
-      name: "Iphone 12 pro max",
-      desc: "apple iphone 12th generation",
-      price: 1200,
-      color: "#33505a",
-      image:
-          "https://img.giznext.com/assets/model/2/95/apple-mobiles-apple-iphone-12-pro-max-10-1634196430.jpg")
-];

@@ -5,7 +5,7 @@ class MyDrawer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final imageUrl =
-        "https://scontent.fccu27-2.fna.fbcdn.net/v/t39.30808-6/305183033_1521986741582644_4461071415612962802_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=K1CRowA15SYAX9HVHQk&_nc_ht=scontent.fccu27-2.fna&oh=00_AT_9mGcigbVCIqlHy0-ffd3dVUwFpJVlra1aputanVYONg&oe=633304C4";
+        "https://scontent.fccu27-2.fna.fbcdn.net/v/t39.30808-6/305183033_1521986741582644_4461071415612962802_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=se93GWmc4GYAX8Npxlj&_nc_ht=scontent.fccu27-2.fna&oh=00_AT_AtUJKXrY4cZrISqS8FHYytm2r0LUkmFbH73gGp_JDlw&oe=6338F384";
     return Drawer(
       child: Container(
         color: Colors.blueAccent,
@@ -45,7 +45,7 @@ class MyDrawer extends StatelessWidget {
                 textScaleFactor: 1.2,
                 style: TextStyle(color: Colors.white),
               ),
-            ), 
+            ),
             ListTile(
               leading: Icon(
                 CupertinoIcons.mail,

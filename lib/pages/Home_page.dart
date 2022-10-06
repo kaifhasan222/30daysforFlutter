@@ -28,11 +28,14 @@ class _HomePageState extends State<HomePage> {
         await rootBundle.loadString("assets/files/catalog.json");
     final decodedData = jsonDecode(catalogJson);
     var productData = decodedData["products"];
+    CatalogModels.Items =
+        List.from(productData).map<Item>((item) => Item.fromMap(item)).toList();
+    setState(() {});
   }
 
   @override
   Widget build(BuildContext context) {
-    final dummyList = List.generate(20, (index) => CatalogModels.Items[0]);
+    // final dummyList = List.generate(20, (index) => CatalogModels.Items[0]);
     return Scaffold(
       appBar: AppBar(
         title: Text(
@@ -42,14 +45,18 @@ class _HomePageState extends State<HomePage> {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: ListView.builder(
-          itemCount: dummyList.length,
-          itemBuilder: (context, index) {
-            return ItemWidget(
-              item: dummyList[index],
-            );
-          },
-        ),
+        child: (CatalogModels.Items != null && CatalogModels.Items.isNotEmpty)
+            ? ListView.builder(
+                itemCount: CatalogModels.Items.length,
+                itemBuilder: (context, index) {
+                  return ItemWidget(
+                    item: CatalogModels.Items[index],
+                  );
+                },
+              )
+            : Center(
+                child: CircularProgressIndicator(),
+              ),
       ),
       drawer: MyDrawer(),
     );

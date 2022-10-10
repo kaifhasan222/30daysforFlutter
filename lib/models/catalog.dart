@@ -1,5 +1,5 @@
 class CatalogModels {
-  static List<Item> Items = [
+  static List<Item> items = [
     Item(
         id: 1,
         name: "Iphone 12 pro max",
